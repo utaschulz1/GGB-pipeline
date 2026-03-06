@@ -1,5 +1,7 @@
 # GGB Meal Prep Publishing Pipeline
 
+https://utaschulz1.github.io/GGB-pipeline/
+
 A local publishing pipeline that turns Markdown recipe and meal plan files into a
 website, a PDF, and an EPUB — in multiple languages.
 
@@ -159,16 +161,19 @@ English labels silently — so the build won't break, just the labels will be wr
 
 ## Publishing to GitHub Pages
 
-The `public/` folder is excluded from the main branch by `.gitignore` — the
-source files are what you version-control, not the build output. To publish the
-built site to GitHub Pages, push the contents of `public/<lang>/` to a `gh-pages`
-branch:
+The `public/` folder is excluded from the main branch by `.gitignore` — source
+files are what you version-control, not build output. To publish, push to a
+separate `gh-pages` branch.
+
+When you `cd public/en` and push, only the **contents** of that folder are
+pushed — not the `public/en/` wrapper. So the English site lands at the root of
+`gh-pages` and is served at `https://username.github.io/repo/`.
+
+### Single language (English only)
 
 ```bash
-# Build first
 bash lantern.sh
 
-# Deploy to gh-pages (run from project root)
 cd public/en
 git init
 git add -A
@@ -177,11 +182,48 @@ git push --force https://github.com/YOUR_USERNAME/YOUR_REPO.git HEAD:gh-pages
 cd ../..
 ```
 
-Then in your GitHub repository go to **Settings → Pages** and set the source to
-the `gh-pages` branch, root folder.
+Then in GitHub go to **Settings → Pages** → source: `gh-pages` branch, root folder.
 
-> The `public/en` folder contains all assets (CSS, JS, images) copied into it
-> during the build, so it is self-contained and can be served directly.
+### Two languages (English + German)
+
+GitHub Pages serves from a single folder root, so both languages need to live
+inside it as subdirectories. The strategy is to push `public/en/` content into
+an `en/` subfolder and `public/de/` into a `de/` subfolder, with a small
+redirect page at the root.
+
+```bash
+# Build both languages
+bash lantern.sh
+bash lantern.sh de
+
+# Assemble gh-pages content in a temp folder
+mkdir -p _ghpages/en _ghpages/de
+cp -r public/en/. _ghpages/en/
+cp -r public/de/. _ghpages/de/
+
+# Add a root index.html that redirects to the default language
+cat > _ghpages/index.html << 'EOF'
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="refresh" content="0; url=en/" />
+</head>
+<body><a href="en/">English</a> | <a href="de/">Deutsch</a></body>
+</html>
+EOF
+
+# Push to gh-pages
+cd _ghpages
+git init
+git add -A
+git commit -m "Publish"
+git push --force https://github.com/YOUR_USERNAME/YOUR_REPO.git HEAD:gh-pages
+cd ..
+rm -rf _ghpages
+```
+
+> **Note:** The language switcher links in the templates (`../en/` and `../de/`)
+> are written for this two-language subfolder layout and will work correctly.
 
 ---
 
