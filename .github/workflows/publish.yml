@@ -1,0 +1,60 @@
+name: Publish Open Textbook
+
+on:
+  push:
+    branches:
+      - main # Set a branch name to trigger deployment
+    paths-ignore:
+      - "original/**"
+      - "README.md"
+
+jobs:
+  publish_textbook:
+    runs-on: ubuntu-latest # Updated to use ubuntu-latest for flexibility
+    steps:
+      # Step 1: Checkout the repository
+      - name: Download Source Files
+        uses: actions/checkout@v4
+
+      # Step 2: Install Pandoc (version: latest or the one that works with your local workflow)
+      - name: Install pandoc
+        uses: pandoc/actions/setup@v1
+        with:
+          version: 2.19.2
+
+      - name: Run pandoc
+        run: pandoc --version
+
+      #Step 3: Setup TinyTeX (a lot lighter than the alternative TexLive, makes a dfference of minutes in building)
+      - name: Setup TinyTeX
+        uses: r-lib/actions/setup-tinytex@v2
+
+      - name: TeX Dependencies
+        run: |
+          tlmgr --version
+          tlmgr install $(cat lib/latex-packages.txt)
+
+      # Step 4: Install LaTeX (takes a lot longer to build)
+      #- name: Install TexLive
+      #run: sudo apt-get install -y texlive-full
+
+      # Step 5: Build the website and PDF (For debugging use lantern-debug.sh instead of lantern.sh)
+      - name: Build Website and PDF
+        run: |
+          bash lantern.sh
+          touch ./public/.nojekyll
+
+      #Debug step if you got difficulties in making a pdf file. I added creation of an intermediate tex file to the bash script lantern-debug.sh.
+      #- name: Upload Intermediate Tex File
+      # uses: actions/upload-artifact@v4 # Or v4+
+      #  with:
+      #    name: intermediate-tex-file
+      #    path: _temp/intermediate.tex # Match the path used in your script
+      #  if: always() # Upload artifact even if the PDF step failed (recommended for debugging)
+
+      # Step 6: Deploy to GitHub Pages
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public/

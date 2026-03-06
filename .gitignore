@@ -1,0 +1,8 @@
+public/
+_temp/
+index.html
+test/
+.claude/
+.venv/
+*.pyc
+__pycache__/

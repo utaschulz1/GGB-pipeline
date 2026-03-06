@@ -1,0 +1,28 @@
+# pandoc settings for PDF output format
+# for all available options, see
+# https://pandoc.org/MANUAL.html#default-files
+
+from: markdown
+to: pdf
+
+# WeasyPrint (HTML+CSS → PDF) — supports CSS Paged Media, @page, string-set.
+# Install with: pip install weasyprint
+pdf-engine: weasyprint
+
+resource-path: ["images"]
+standalone: true
+
+filters:
+  - lib/lua/recipe-metadata.lua
+  - lib/lua/cover-image.lua
+
+css:
+  - lib/css/recipe.css
+  - lib/css/print.css
+
+# table of contents
+table-of-contents: true
+toc-depth: 2
+
+# section numbers
+number-sections: false

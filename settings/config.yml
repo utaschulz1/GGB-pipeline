@@ -1,0 +1,15 @@
+# publication settings
+
+toc-title: "Contents"
+
+# download settings
+
+download: # full-text outputs
+  - label: PDF
+    link: 00_GGB-starter-week.pdf
+  - label: EPUB
+    link: 00_GGB-starter-week.epub
+  #  - label: DOCX
+  #    link: ggb-starter-plan.docx
+  #  - label: Markdown
+  #    link: ggb-starter-plan.md

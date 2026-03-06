@@ -1,0 +1,412 @@
+/* print.css — PDF-only styles (WeasyPrint)
+ * No @media print wrapper — this file IS the print CSS.
+ * Hard-coded values for independence from screen theme. */
+
+/* ── Body ─────────────────────────────────────────────────────────── */
+
+body {
+    font-size: 11pt;
+    font-family: 'Source Serif 4', Georgia, serif;
+    line-height: 1.55;
+    color: #1a1a1a;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 0.6em;
+}
+
+/* ── Headings ─────────────────────────────────────────────────────── */
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    margin-bottom: 0.4em;
+}
+
+/* h1 = plan/recipe title: large, brand colour, rule underneath */
+h1 {
+    font-size: 24pt;
+    color: #1e7896;
+    margin-top: 0.6em;
+}
+
+/* h2.recipe-title = recipe name (was h1, shifted down during preprocessing) */
+h2.recipe-title {
+    font-size: 20pt;
+    color: #1e7896;
+    margin-top: 0.6em;
+    break-before: page;
+    string-set: title content(text);
+}
+
+/* h2 = section headings within plan/instructions: thin underline */
+h2:not(.recipe-title) {
+    font-size: 15pt;
+    color: #1e7896;
+    margin-top: 1.4em;
+    padding-bottom: 0.15em;
+    border-bottom: 0.75pt solid #a8d4e0;
+}
+
+/* h3 = subsections: slightly muted */
+h3 {
+    font-size: 12pt;
+    color: #165f78;
+    margin-top: 1em;
+}
+
+h4 {
+    font-size: 11pt;
+    color: #165f78;
+    margin-top: 0.8em;
+}
+
+h5 { font-size: 11pt; color: #555; }
+
+/* ── Chapter running header ────────────────────────────────────────── *
+ * # (h1) = plan/recipe title — triggers page break and running header.
+ * ## (h2) = sections within a plan/recipe — no page break.
+ * No chapter numbering — running header only. */
+
+h1 {
+    string-set: title content(text);
+}
+
+/* Title block h1 (book title) must not set the running header */
+#title-block-header h1 {
+    string-set: none;
+}
+
+/* ── Page setup ───────────────────────────────────────────────────── */
+
+@page {
+    size: A4;
+    margin: 1.8cm 2cm 1.8cm 2cm;
+
+    @bottom-center {
+        content: counter(page);
+        font-size: 8pt;
+        color: #999;
+    }
+    @top-center {
+        content: string(title);
+        font-size: 8pt;
+        font-style: italic;
+        color: #999;
+    }
+}
+
+@page :first {
+    @top-center { content: none; }
+    @bottom-center { content: none; }
+}
+
+@page :blank {
+    @top-center { content: none; }
+    @bottom-center { content: none; }
+    @bottom-left { content: none; }
+    @bottom-right { content: none; }
+}
+
+/* ── Named pages — frontmatter (no page numbers) ─────────────────── */
+
+.title-page,
+.copyright-page,
+.table-of-contents,
+#title,
+#copyright,
+#toc,
+#title-block-header {
+    page: frontmatter;
+}
+
+#title-block-header {
+    break-after: page;
+}
+
+nav[role="doc-toc"] {
+    page: frontmatter;
+    break-after: page;
+}
+
+@page frontmatter {
+    @top-center { content: none; }
+    @bottom-center { content: none; }
+    @bottom-left { content: none; }
+    @bottom-right { content: none; }
+}
+
+/* ── Page breaks ──────────────────────────────────────────────────── */
+
+.title-page { break-after: page; }
+.copyright-page { break-after: page; }
+.table-of-contents { break-after: page; }
+
+h1 { break-before: page; }
+h2 { break-before: auto; }
+
+/* Don't break before the very first h1 (it follows the TOC) */
+nav + h1 { break-before: auto; }
+
+h3, h4 {
+    break-after: avoid;
+}
+
+/* ── Links ────────────────────────────────────────────────────────── */
+
+a {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-thickness: 0.5pt;
+    text-underline-offset: 0.15em;
+}
+
+/* ── Code ─────────────────────────────────────────────────────────── */
+
+pre, code {
+    font-family: Consolas, 'Courier New', monospace;
+    font-size: 9pt;
+}
+
+/* ── References ───────────────────────────────────────────────────── */
+
+div.csl-entry {
+    margin-left: 2em;
+    text-indent: -2em;
+    margin-bottom: 1em;
+}
+
+/* ── Lists ─────────────────────────────────────────────────────────── */
+
+ul {
+    list-style-type: "– ";   /* en-dash: lighter than a disc bullet */
+    padding-left: 1.2em;
+}
+
+ol {
+    padding-left: 1.5em;
+}
+
+li {
+    margin-bottom: 0.1em;
+    line-height: 1.4;
+}
+
+/* Nested lists: tighter still */
+li > ul,
+li > ol {
+    margin-top: 0.1em;
+    margin-bottom: 0.1em;
+}
+
+/* ── Table of contents ────────────────────────────────────────────── */
+
+nav[role="doc-toc"] ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+/* h1-level entries: plan/recipe titles — bold, full size, spaced */
+nav[role="doc-toc"] > ul > li {
+    font-size: 11pt;
+    font-weight: 700;
+    color: #1e7896;
+    margin-top: 0.6em;
+    margin-bottom: 0.1em;
+}
+
+nav[role="doc-toc"] > ul > li > a {
+    color: #1e7896;
+    text-decoration: none;
+}
+
+/* h2-level entries: sections — lighter, indented */
+nav[role="doc-toc"] > ul > li > ul {
+    padding-left: 1.2em;
+}
+
+nav[role="doc-toc"] > ul > li > ul > li {
+    font-size: 9.5pt;
+    font-weight: 400;
+    color: #555;
+    margin-top: 0.15em;
+}
+
+nav[role="doc-toc"] > ul > li > ul > li > a {
+    color: #555;
+    text-decoration: none;
+}
+
+/* ── Hide screen-only elements ────────────────────────────────────── */
+
+.theme-switcher-bar,
+.theme-switcher,
+.nav-toggle,
+.skip-link,
+.sr-only,
+aside,
+nav:not([role="doc-toc"]) {
+    display: none;
+}
+
+details {
+    display: block;
+}
+
+details summary {
+    display: none;
+}
+
+/* ── Images ───────────────────────────────────────────────────────── */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+figure {
+    break-inside: avoid;
+    margin: 1em 0;
+}
+
+/* ── Tables ───────────────────────────────────────────────────────── */
+
+table {
+    border-collapse: collapse;
+    width: auto;
+    table-layout: auto;
+    font-size: 10pt;
+    margin: 0.4em 0 0.8em 0;
+}
+
+/* Pandoc injects col width="50%" — neutralise it */
+col {
+    width: auto !important;
+}
+
+thead {
+    display: none;
+}
+
+td {
+    border: none;
+    padding: 0.1em 0;
+    vertical-align: top;
+}
+
+/* Amount column: shrink to content, right-aligned */
+td:first-child {
+    width: 1px !important;
+    white-space: nowrap;
+    text-align: right !important;
+    padding-right: 1.4em;
+}
+
+/* Ingredient column: left-aligned */
+td:nth-child(2) {
+    text-align: left;
+}
+
+/* Shopping list category header rows */
+td.sl-category {
+    text-align: left !important;
+    width: auto !important;
+    white-space: normal !important;
+    padding-right: 0;
+    padding-top: 0.9em;
+    padding-bottom: 0.15em;
+    font-weight: 700;
+    font-size: 9pt;
+    color: #1e7896;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+/* No top padding on the very first category */
+.shopping-list tr:first-child td.sl-category {
+    padding-top: 0;
+}
+
+/* ── Recipe meta bar (print version) ──────────────────────────────── */
+
+.recipe-meta {
+    display: flex;
+    gap: 2em;
+    background: #f4f5f8;
+    border-left: 3pt solid #1e7896;
+    padding: 0.45em 0.8em;
+    margin: 0.6em 0 1em 0;
+    font-size: 9.5pt;
+    color: #1e7896;
+}
+
+/* No emoji font installed — remove icon pseudo-elements, text labels suffice */
+.recipe-prep-time::before,
+.recipe-cook-time::before,
+.recipe-servings::before,
+.recipe-kcal::before {
+    content: none;
+}
+
+/* ── Recipe image ──────────────────────────────────────────────────── */
+
+.recipe-image {
+    margin: 0 0 1.5em 0;
+    break-inside: avoid;
+}
+
+.recipe-image img {
+    width: 100%;
+    max-height: 12cm;
+    object-fit: cover;
+    display: block;
+}
+
+/* ── Cover page ────────────────────────────────────────────────────── */
+
+/* Set cover-image in metadata.yml: cover-image: images/your-cover.jpg
+ * Path is relative to the project root (where pandoc is run from). */
+
+#title-block-header {
+    min-height: 20cm;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 3cm 2.5cm 2cm;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+#title-block-header h1.title {
+    font-size: 28pt;
+    color: white;
+    margin-bottom: 0.3em;
+}
+
+#title-block-header .subtitle,
+#title-block-header .author {
+    font-size: 14pt;
+    color: rgba(255,255,255,0.9);
+}
+
+/* ── Meal plan specific ───────────────────────────────────────────── */
+
+/* Shopping list — keep compact, avoid page breaks within a category */
+h3 + ul {
+    break-inside: avoid;
+}
+
+/* Schedule days — keep day heading with its content */
+h3 + p,
+h3 + ul,
+h3 + ol {
+    break-before: avoid;
+}
+
+/* Equipment list */
+h4 + ul {
+    break-inside: avoid;
+}

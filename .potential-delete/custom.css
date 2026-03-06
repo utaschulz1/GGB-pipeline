@@ -1,0 +1,71 @@
+/* this is the top bar that fixes the theme switcher and the hamburger button at the content container width */
+.theme-switcher-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--theme-switcher-background);
+  z-index: 1000;
+}
+.theme-switcher-bar .container {
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between;
+}
+main.container {
+  padding-top: 4em;
+}
+
+.nav-toggle {
+  padding: unset;
+  margin-top: 1em;
+}
+/* Ensure ordered and unordered lists in the main content area
+ * render as proper block lists with visible numbering/bullets and
+ * spacing between items. Pico CSS uses CSS custom properties for
+ * spacing which wkhtmltopdf (PDF engine) does not support, so we
+ * set explicit fallback values here. */
+main ol,
+main ul {
+    padding-left: 1.5em;
+    margin-bottom: 1em;
+}
+
+main ol {
+    list-style: decimal;
+}
+
+main ul {
+    list-style: disc;
+}
+
+main ol li,
+main ul li {
+    display: list-item;
+    margin-bottom: 0.4em;
+    line-height: 1.5;
+}
+
+/* Style Pandoc TOC */
+details:has(.toc) {
+    background-color: var(--theme-switcher-background);
+}
+
+.toc ul {
+ 
+  margin-left: 1.5em;       /* Indent nested lists */
+  padding-left: 0;          /* Remove default padding */
+}
+
+.toc li {
+  list-style: none;         /* Remove bullets */
+  margin: 0.2em 0;          /* Optional: space between items */
+}
+
+/* Optional: further indent nested levels */
+.toc ul ul {
+  margin-left: 2em;
+}
+.toc ul li a {
+  font-size: small;
+  }

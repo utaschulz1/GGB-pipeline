@@ -1,0 +1,9 @@
+# Build configuration for lantern.sh
+# Controls which language and plans are built for PDF and EPUB output.
+# Each plan corresponds to a separate PDF/EPUB output, with its own title and metadata pulled from the plan's frontmatter.
+# Recipes are pulled automatically from each plan's `included_recipes` frontmatter field.
+
+language: en
+
+plans:
+  - 00_GGB-starter-week
