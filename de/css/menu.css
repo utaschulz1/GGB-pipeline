@@ -1,0 +1,78 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Aside and Navigation Styles */
+aside {
+    background: var(--theme-switcher-background);
+    color: var(--theme-switcher-color);
+    width: auto;
+    position: fixed;
+    padding-left: 10px;
+    top: 3em;
+    right: 1em;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    transform: translateX(120%); /* Hide sidebar by default */
+    z-index: 1000;
+}
+
+aside.open {
+    transform: translateX(0); /* Slide in when open */
+}
+    
+nav {
+    padding: 0px;
+    display: flex;
+}
+
+/* Hamburger Button Styles */
+.nav-toggle {
+    background: var(--theme-switcher-background); /* Background from theme switcher */
+    border: none;
+    color: var(--theme-switcher-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+    width: auto;
+    display: flex;
+    /* position: fixed; */
+    align-items: center;
+    z-index: 1001;
+    margin: 0.5em;
+    padding: 0;
+}
+.nav-toggle img {
+    width: 2em;
+    height: 2em;
+    margin-right: 0.5em;
+}
+
+/* Menu Styles */
+ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+
+ul li {
+    margin: 10px 0; /* Space between items */
+}
+
+ul li a {
+    color: var(--theme-switcher-color); /* Link color from theme switcher */
+    text-decoration: none; /* Remove underline */
+    padding: 10px; /* Padding for links */
+    display: block; /* Block display for full clickable area */
+    transition: background-color 0.3s; /* Smooth background transition */
+}
+
+ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Light background on hover */
+}

@@ -1,0 +1,105 @@
+:root {
+    --theme-switcher-background: #0e1a22; /* Default black background */
+    --theme-switcher-color: #ffffff; /* Default white text */
+}
+
+[data-theme="light"] {
+    --theme-switcher-background: #ffffff; /* Light theme background */
+    --theme-switcher-color: #000000; /* Light theme text */
+}
+
+[data-theme="dark"] {
+    --theme-switcher-background: #0e1a22; /* Dark theme background */
+    --theme-switcher-color: #ffffff; /* Dark theme text */
+}
+.theme-switcher-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--theme-switcher-background);
+  z-index: 1000;
+}
+
+.theme-switcher-bar .container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+container .theme-switcher {
+    position: fixed;
+    top: 0; /* Position it at the very top of the page */
+    right: 0; /* Align it to the left edge */
+    width: auto; /* Make it span the full width of the page */
+    display: flex; /* Use flexbox for horizontal layout */
+    background: var(--theme-switcher-background);
+    color: var(--theme-switcher-color);
+    justify-content: center; /* Center the items horizontally */
+    align-items: center; /* Center the items vertically */
+    padding: 0.5rem 1rem; /* Add some padding for spacing */
+    border-radius: 0; /* Remove rounded corners */
+    z-index: 1000; /* Ensure it stays on top of other elements */
+}    
+
+.theme-switcher ul {
+    display: flex; /* Arrange list items horizontally */
+    /*gap: 1rem; /* Add spacing between list items */
+    margin: 0;
+    padding: 0;
+}
+
+.theme-switcher li {
+    list-style-type: none;
+    font-size: small;
+}
+
+.theme-switcher a {
+    color: var(--contrast); /* Use the contrast color for links */
+    /*text-decoration: none; /* Remove underline from links */
+    /*font-weight: bold; /* Make the links stand out */
+    /*font-size: 1.5rem; /* Increase the size of the symbols */
+    display: flex; /* Ensure proper alignment */
+    align-items: center; /* Vertically center the content */
+    justify-content: center; /* Horizontally center the content */
+}
+
+.theme-switcher a svg,
+.theme-switcher a svg * {
+  pointer-events: none;
+}
+
+/* Centered HOME link — absolute so it doesn't displace flex items */
+.top-home-link {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--theme-switcher-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 0.4em 0.8em;
+    white-space: nowrap;
+}
+
+/* Right-side group: lang switch + hamburger */
+.top-bar-right {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 0.25em;
+}
+
+.lang-switch {
+    font-size: 0.8rem;
+    color: var(--theme-switcher-color);
+    padding: 0 0.4em;
+}
+
+.lang-switch a {
+    color: var(--theme-switcher-color);
+    text-decoration: none;
+    padding: 0.1em 0.2em;
+}
+
+.lang-switch a:hover {
+    text-decoration: underline;
+}

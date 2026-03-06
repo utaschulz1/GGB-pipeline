@@ -1,0 +1,212 @@
+/* epub.css — EPUB-only styles (e-reader safe)
+ * No fixed positioning, no flexbox, no CSS variables,
+ * no external font imports, no complex selectors. */
+
+/* ── Body ─────────────────────────────────────────────────────────── */
+
+body {
+    font-family: Georgia, serif;
+    line-height: 1.6;
+    margin: 1em;
+    color: #1a1a1a;
+}
+
+/* ── Headings ─────────────────────────────────────────────────────── */
+
+h1 {
+    font-size: 1.8em;
+    font-weight: 700;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+h2 {
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-top: 1em;
+    margin-bottom: 0.4em;
+}
+
+h3 {
+    font-size: 1.2em;
+    font-weight: 700;
+    margin-top: 0.8em;
+    margin-bottom: 0.3em;
+}
+
+h4 {
+    font-size: 1.1em;
+    font-weight: 700;
+    margin-top: 0.6em;
+    margin-bottom: 0.3em;
+}
+
+/* ── Lists ────────────────────────────────────────────────────────── */
+
+ol, ul {
+    margin: 0.5em 0 0.5em 1.5em;
+}
+
+ol {
+    list-style: decimal;
+}
+
+ul {
+    list-style: disc;
+}
+
+li {
+    margin-bottom: 0.3em;
+    line-height: 1.5;
+}
+
+/* ── Images ───────────────────────────────────────────────────────── */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ── Recipe metadata bar ──────────────────────────────────────────── */
+
+.recipe-meta {
+    border-top: 1pt solid #999;
+    border-bottom: 1pt solid #ccc;
+    padding: 0.5em 0;
+    margin-bottom: 1em;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.recipe-prep-time,
+.recipe-cook-time,
+.recipe-servings,
+.recipe-kcal {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.2em;
+}
+
+/* ── References ───────────────────────────────────────────────────── */
+
+div.csl-entry {
+    margin-left: 2em;
+    text-indent: -2em;
+    margin-bottom: 1em;
+}
+
+/* ── Links ────────────────────────────────────────────────────────── */
+
+a {
+    color: currentColor;
+    text-decoration: underline;
+}
+
+/* ── Code ─────────────────────────────────────────────────────────── */
+
+pre, code {
+    font-family: monospace;
+    font-size: 0.9em;
+}
+
+pre {
+    padding: 0.5em;
+    border: 1pt solid #ccc;
+    overflow-x: auto;
+}
+
+/* ── Tables ───────────────────────────────────────────────────────── */
+
+table {
+    border-collapse: collapse;
+    width: auto;
+    table-layout: auto;
+    font-size: 0.75em;
+    margin: 0.4em 0 0.8em 0;
+}
+
+col {
+    width: auto !important;
+}
+
+thead {
+    display: none;
+}
+
+td {
+    border: none;
+    padding: 0.1em 0;
+    vertical-align: top;
+}
+
+td:first-child {
+    width: 1px !important;
+    white-space: nowrap;
+    text-align: right !important;
+    padding-right: 1.2em;
+    font-size: 0.75em;
+}
+
+td:nth-child(2) {
+    font-size: 0.75em;
+}
+
+td:nth-child(2) {
+    text-align: left;
+}
+
+td.sl-category {
+    text-align: left !important;
+    width: auto !important;
+    white-space: normal !important;
+    padding-right: 0;
+    padding-top: 0.8em;
+    padding-bottom: 0.1em;
+    font-weight: 700;
+    color: #1e7896;
+}
+
+.shopping-list tr:first-child td.sl-category {
+    padding-top: 0;
+}
+
+/* ── Definition lists ─────────────────────────────────────────────── */
+
+dt {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+dd {
+    margin-left: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+/* ── Titlepage ────────────────────────────────────────────────────── */
+
+.titlepage {
+    text-align: center;
+    margin-top: 3em;
+}
+
+.titlepage h1 {
+    font-size: 2em;
+}
+
+/* ── Hide screen-only elements ────────────────────────────────────── */
+
+.theme-switcher-bar,
+.theme-switcher,
+.nav-toggle,
+aside,
+nav {
+    display: none;
+}
+
+details {
+    display: block;
+}
+
+details summary {
+    display: none;
+}
