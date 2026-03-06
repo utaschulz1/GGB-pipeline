@@ -165,31 +165,9 @@ The `public/` folder is excluded from the main branch by `.gitignore` — source
 files are what you version-control, not build output. To publish, push to a
 separate `gh-pages` branch.
 
-When you `cd public/en` and push, only the **contents** of that folder are
-pushed — not the `public/en/` wrapper. So the English site lands at the root of
-`gh-pages` and is served at `https://username.github.io/repo/`.
-
-### Single language (English only)
-
-```bash
-bash lantern.sh
-
-cd public/en
-git init
-git add -A
-git commit -m "Publish"
-git push --force https://github.com/YOUR_USERNAME/YOUR_REPO.git HEAD:gh-pages
-cd ../..
-```
-
-Then in GitHub go to **Settings → Pages** → source: `gh-pages` branch, root folder.
-
-### Two languages (English + German)
-
-GitHub Pages serves from a single folder root, so both languages need to live
-inside it as subdirectories. The strategy is to push `public/en/` content into
-an `en/` subfolder and `public/de/` into a `de/` subfolder, with a small
-redirect page at the root.
+The layout is: **English at the root**, German in a `de/` subfolder. The
+language switcher uses absolute URLs based on `siteurl` in `lantern.sh`, so
+it always points to the right place regardless of which page you're on.
 
 ```bash
 # Build both languages
@@ -197,20 +175,9 @@ bash lantern.sh
 bash lantern.sh de
 
 # Assemble gh-pages content in a temp folder
-mkdir -p _ghpages/en _ghpages/de
-cp -r public/en/. _ghpages/en/
+mkdir -p _ghpages/de
+cp -r public/en/. _ghpages/
 cp -r public/de/. _ghpages/de/
-
-# Add a root index.html that redirects to the default language
-cat > _ghpages/index.html << 'EOF'
-<!DOCTYPE html>
-<html>
-<head>
-  <meta http-equiv="refresh" content="0; url=en/" />
-</head>
-<body><a href="en/">English</a> | <a href="de/">Deutsch</a></body>
-</html>
-EOF
 
 # Push to gh-pages
 cd _ghpages
@@ -222,8 +189,10 @@ cd ..
 rm -rf _ghpages
 ```
 
-> **Note:** The language switcher links in the templates (`../en/` and `../de/`)
-> are written for this two-language subfolder layout and will work correctly.
+Then in GitHub go to **Settings → Pages** → source: `gh-pages` branch, root folder.
+
+> The language switcher uses absolute URLs from the `siteurl` variable in
+> `lantern.sh`. Update it if you rename your repo or move to a custom domain.
 
 ---
 

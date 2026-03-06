@@ -4,7 +4,7 @@
 
 output_filename='ggb-starter-plan'
 output_directory='public'
-siteurl=''
+siteurl='https://utaschulz1.github.io/GGB-pipeline'
 
 output_formats() {
     html
