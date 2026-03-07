@@ -408,6 +408,7 @@ html() {
         --metadata-file "$meta_file" \
         --metadata-file settings/config.yml \
         --template templates/home.html \
+        --metadata siteurl="$siteurl" \
         --metadata updatedtime="$(date "+%Y-%m-%d")" \
         --standalone \
         --output "$lang_dir/index.html"
