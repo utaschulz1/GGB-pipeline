@@ -1,0 +1,158 @@
+/* screen.css — HTML-only styles (replaces html.css + custom.css)
+ * Can use Pico CSS variables freely.
+ * Loaded after pico.min.css, theme.css, theme-switcher.css, menu.css. */
+
+/* ── Layout ───────────────────────────────────────────────────────── */
+
+.grid {
+    grid-template-columns: 25% 1fr;
+}
+
+@media screen and (max-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ── Accessibility ────────────────────────────────────────────────── */
+
+.skip-link {
+    background: rgb(211, 211, 211);
+    color: rgb(57, 52, 134);
+    left: 50%;
+    padding: 8px;
+    position: absolute;
+    transform: translateY(-100%);
+    transition: transform 0.3s;
+}
+
+.skip-link:focus {
+    transform: translateY(0%);
+}
+
+.sr-only {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+/* ── Custom scrollbar (Webkit) ────────────────────────────────────── */
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+/* ── Back link ────────────────────────────────────────────────────── */
+
+.back {
+    text-transform: uppercase;
+    font-size: x-small;
+    color: var(--contrast);
+}
+
+/* ── References (CSL bibliography) ────────────────────────────────── */
+
+div.csl-entry {
+    margin-left: 2em;
+    text-indent: -2em;
+    margin-bottom: 1em;
+}
+
+/* ── Questions (details/summary) ──────────────────────────────────── */
+
+details {
+    background-color: var(--contrast);
+    padding: 1em;
+}
+
+details summary {
+    font-weight: bold;
+    color: var(--primary);
+}
+
+details p {
+    color: var(--secondary);
+}
+
+/* ── Box card ─────────────────────────────────────────────────────── */
+
+.box {
+    margin: var(--block-spacing-vertical) 0;
+    padding: var(--block-spacing-vertical) var(--block-spacing-horizontal);
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    background: var(--card-background-color);
+    box-shadow: var(--card-box-shadow);
+}
+
+/* ── Definition lists ─────────────────────────────────────────────── */
+
+dl > dt {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* ── Theme switcher bar + container ───────────────────────────────── */
+
+.theme-switcher-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--theme-switcher-background);
+    z-index: 1000;
+}
+
+.theme-switcher-bar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main.container {
+    padding-top: 4em;
+}
+
+.nav-toggle {
+    padding: unset;
+    margin-top: 1em;
+}
+
+/* ── Table of Contents ────────────────────────────────────────────── */
+
+details:has(.toc) {
+    background-color: var(--theme-switcher-background);
+}
+
+.toc ul {
+    margin-left: 1.5em;
+    padding-left: 0;
+}
+
+.toc li {
+    list-style: none;
+    margin: 0.2em 0;
+}
+
+.toc ul ul {
+    margin-left: 2em;
+}
+
+.toc ul li a {
+    font-size: small;
+}
+
+/* ── Recipe meta override for screen (flex with Pico theme colours) ─ */
+
+.recipe-meta {
+    border-top-color: var(--primary);
+}

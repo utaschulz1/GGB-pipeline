@@ -1,0 +1,145 @@
+.skip-link {
+    background: rgb(211, 211, 211);
+    color: rgb(57, 52, 134);
+    left: 50%;
+    padding: 8px;
+    position: absolute;
+    transform: translateY(-100%);
+    transition: transform 0.3s;
+}
+  
+.skip-link:focus {
+    transform: translateY(0%);
+}
+.slider {
+    position: relative;
+    max-width: 800px; /* Adjust as needed */
+    margin: 3rem auto;
+    overflow: hidden;
+    height: auto;
+    padding: 0;
+}
+
+.slides {
+    width: 100%; 
+    margin: 0 auto; /* Center slides */
+    display: flex;
+    transition: transform 0.5s ease;
+    height: auto;
+}
+
+.slides img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border: none;
+    cursor: pointer;
+    padding: 0px;
+    z-index: 10; /* Ensure buttons appear above other elements */
+    font-size: 1.5rem;
+    /* Without a fixed width and height, the size of the buttons was determined by their content or other CSS properties, which resulted in a hozontal bar over the slides. Without display: flex;, the arrow symbols were centered within the "bar" button. So, not optional.*/
+    width: 2.5rem; /* Optional: Set a fixed width for consistency */
+    height: 2.5rem; /* Optional: Set a fixed height for consistency */
+    display: flex;/* Use flexbox for alignment */
+    align-items: center;/* Vertically center the content inside the button */
+    justify-content: center;/* Horizontally center the content inside the button */
+    box-shadow: none; /* Remove any shadow */
+}
+.prev {
+    left: -10px;
+}
+.next {
+    right: -10px;
+}
+
+.credit-line {
+    margin: 1rem 0;
+}
+
+.title-card {
+    height: auto;
+    padding: 0;
+    margin-left: 10px;
+}
+
+.title-card-body {
+    position:relative;
+    margin-top: 1.5rem;    
+    margin-bottom: 1.5rem;
+    
+}
+
+/* headings */
+
+.sr-only {
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}
+
+hgroup:after {
+    display: block;
+    max-width: 100px;
+    margin-top: 1rem;
+    border-bottom: 0.125rem solid var(--primary);
+    content: "";
+}
+
+article > header > details,
+article > footer > details {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+}
+
+summary {
+    color: inherit;
+    background: transparent;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0.5rem 0;
+}
+
+summary:hover {
+    text-decoration: underline;
+}
+
+/* buttons */
+
+article > footer > a {
+    margin: 0.5em;
+}
+
+article > footer > a:hover {
+    background-color: #1095c1;
+}
+
+/* metadata */
+
+details summary, details > dl > dt {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+toc li, toc nav, toc ol, toc ul{
+    display:block
+}
+toc li{
+    padding:calc(var(--spacing) * .5)
+}
+toc li a{
+    margin:calc(var(--spacing) * -.5);
+    padding:calc(var(--spacing) * .5)
+}
