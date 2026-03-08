@@ -177,8 +177,10 @@ bash lantern.sh
 bash lantern.sh de
 
 # Assemble gh-pages content in a temp folder
-# This is a workaround to make the language switcher work in gh-pages
-# NOTE: it only seems to work if, in main, there is a publish.yml in .github/workflows with a Deploy step
+# This is a weird workaround to make the language switcher work in gh-pages
+#===============
+# NOTE: it only seems to work if, in main, there is a publish.yml in .github/workflows with a Deploy step. And even though, on pithub, in Settings/pages/source it is set to "Deploy from a branch" it uses the actions in the workflows. The action itself "fails" but the build works. And it fails if ".github/workflows" aren't present.
+#===============
 mkdir -p _ghpages
 cp -r public/. _ghpages/
 cp -r public/de/. _ghpages/
