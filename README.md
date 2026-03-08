@@ -169,15 +169,19 @@ The layout is: **English at the root**, German in a `de/` subfolder. The
 language switcher uses absolute URLs based on `siteurl` in `lantern.sh`, so
 it always points to the right place regardless of which page you're on.
 
+Then in GitHub go to **Settings → Pages** → source: `gh-pages` branch, root folder.
+
 ```bash
 # Build both languages
 bash lantern.sh
 bash lantern.sh de
 
 # Assemble gh-pages content in a temp folder
-mkdir -p _ghpages/de
-cp -r public/en/. _ghpages/
-cp -r public/de/. _ghpages/de/
+# This is a workaround to make the language switcher work in gh-pages
+# NOTE: it only seems to work if, in main, there is a publish.yml in .github/workflows with a Deploy step
+mkdir -p _ghpages
+cp -r public/. _ghpages/
+cp -r public/de/. _ghpages/
 
 # Push to gh-pages
 cd _ghpages
@@ -188,11 +192,6 @@ git push --force https://github.com/YOUR_USERNAME/YOUR_REPO.git HEAD:gh-pages
 cd ..
 rm -rf _ghpages
 ```
-
-Then in GitHub go to **Settings → Pages** → source: `gh-pages` branch, root folder.
-
-> The language switcher uses absolute URLs from the `siteurl` variable in
-> `lantern.sh`. Update it if you rename your repo or move to a custom domain.
 
 ---
 
