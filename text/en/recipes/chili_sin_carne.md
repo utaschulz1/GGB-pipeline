@@ -3,29 +3,15 @@ title: "Chili Sin Carne"
 slug: "chili-sin-carne"
 language: "en"
 date: 2024-05-22
-category: "Dinner / Meal Prep"
-tags: ["Beans", "High Fiber", "One-Pot", "Budget-Friendly"]
+recipeCategory: ["dinner", "lunch"] #out of: dinner, lunch, breakfast, side dish, snack, dessert (from Schema.org)
+mealType: "stew" #out of: stew, soup, salad, curry, pasta (more to come, custom)
+difficulty: "very easy" #out of: very easy, easy, medium, advance 
 prep_time: "15 mins"
-cook_time: "35 mins"
+cook_time: "25 mins"
 servings: 4
 kcal_per_serving: 560
 image: "images/chili-sin-carne/chili_sin_carne.jpg"
-ingredients:
-  - 600g cooked beans (Kidney, Black, or Pinto)
-  - 200g onions
-  - 100g leeks
-  - 4 cloves garlic (10g)
-  - 70g carrots (approx. 2)
-  - 30g fresh ginger
-  - 250g red bell pepper
-  - 1 can sweet corn (350g)
-  - 400g tomato pulp/puree
-  - 200ml red wine (or orange juice for alcohol-free)
-  - 1 bunch fresh coriander (cilantro)
-  - Zest and juice of 1 lemon
-  - fresh salad of your choice (try lettuce and carrots)
-  - Spices: Salt, ground coriander, chili flakes, 3 bay leaves, black cumin, paprika, olive oil
-  - 120g nachos (low-salt), alternatively sweet potatos or rice
+
 ---
 
 # Chili Sin Carne

@@ -3,21 +3,23 @@
 ## naming
 - folders with dashes 
 - files with underscores
+- front name: Vegan GGB Meal Prep
 
 ## GGB
-- GGB stands for Grain Green Been from a grain, a green, a been
+- GGB stands for Grains Greens Beans or from a grain, a green, a bean
 - GGB capitalized
-- We are loose about "green", it can be any vegetable, no matter the colour. Though, anything green with every meal is important to us. 
-- Grain is food from grain like bread or rice or barley as well as high-carb sides, like sweet-potatoes, taco, wraps, nachos, potatoes.
+- We are loose about "greens", it can be any vegetable, no matter the colour. Though, anything green with every meal is important to us. 
+- A grain is food from grain like bread or rice or barley as well as high-carb sides, like sweet-potatoes, taco, wraps, nachos, potatoes.
 
 ## Recipes
 - Keep it short, dont mention washing and cleaning the vegetables or peeling the onions or shaking the cilantro or salat. This is not a cooking school. Instead, a step starts with cutting or grading or similar...
 - Rice is just "cook the rice according to instructions on the package" dont go into detail
 
 ## German
-Use infinitive wherever possible, like "Zwiebeln fein hacken.", otherise "du" form, never use formal "Sie".
+In Recipes: Use infinitive wherever possible, like "Zwiebeln fein hacken."
+Approach; "du" form, never use formal "Sie".
 Use space between numbers and units "200 g".
-Unit's short form uncapitalized and no dots. correct: 15 min wrong: 15 Min.
+Unit's short form uncapitalized and no dots. Correct: 15 min Wrong: 15 Min.
 
 ## Pipeline Info
 ### images in md
