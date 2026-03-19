@@ -47,7 +47,7 @@ Pandoc wraps every ![...]() in a <figure>. The CSS has figure { break-inside: av
   └──────────────────┴─────────┴─────────────────┘
 
   ### How to make the step image grids
-  python3 lib/make_grid.py "images/chili-sin-carne/[1-8]_*.jpg" 4 2 images/chili-sin-carne/steps_grid.jpg
+  `python3 lib/make_grid.py "images/chili-sin-carne/[1-8]_*.jpg" 4 2 images/chili-sin-carne/steps_grid.jpg` 
   ### How to crop or pad images to 1:1
 ```bash
   sudo apt install imagemagick

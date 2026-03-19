@@ -1,5 +1,7 @@
 4 servings, grad so genug, nicht besonders geeignet zum Einfrieren.
 
+35 min total
+
 3 c. sopa de azeite
 1 cebola 100g
 2 dentes de alho
