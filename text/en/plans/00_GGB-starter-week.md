@@ -47,7 +47,7 @@ If you eat with 4 people, you have to repeat the shopping and then the cooking f
 3. Spicy Sweet Potato with Berries and Beans [Jump to recipe](#spicy-sweet-potatoes-with-berries-beans)
 
 ## Equipment
-Minimum: pan (3 liter), pan for rice, cooking top, hand blender
+Minimum: pan (3 liter), pan for rice, cooking top, hand blender, freezer
 
 Optional: wok, frying pan
 
@@ -67,7 +67,7 @@ When starting with dry beans: slow cooker (for unsupervised bean prep)
 <tr><td>500g</td><td>Onion</td></tr>
 <tr><td>100g</td><td>Leeks</td></tr>
 <tr><td>7 cloves</td><td>Garlic</td></tr>
-<tr><td>200g</td><td>Carrots</td></tr>
+<tr><td>500g</td><td>Carrots</td></tr>
 <tr><td>60g</td><td>Fresh ginger</td></tr>
 <tr><td>250g (1 big)</td><td>Red bell pepper</td></tr>
 <tr><td>12</td><td>Cherry tomatoes</td></tr>
