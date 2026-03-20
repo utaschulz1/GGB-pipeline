@@ -59,6 +59,9 @@ Pandoc wraps every ![...]() in a <figure>. The CSS has figure { break-inside: av
   convert input.jpg -gravity Center -crop 1:1+0+0 output.jpg  # crops
 ```
 
+or `convert whitebean_potato_celery_pot_1x1.jpg -gravity NorthWest -extent 16:9 whitebean_potato_celery_pot_16x9.jpg`
+
+
 ## Frontmatters
 
   The recipe frontmatter only contains:                  

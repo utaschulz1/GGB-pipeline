@@ -7,6 +7,8 @@ Kartoffeln können auch Drillinge sein, ungeschält.
 
 Passt nur in den 3l Topf, wenn man die Kartoffeln recht klein schneidet. Entweder 5l nehmen oder in 2 Töpfe machen, oder Kartoffeln einzeln servieren.
 
+![White Bean Potato Celery Pot](images/whitebean-potato-celery-pot/hero_whitebean_potato_celery_pot_16x9.jpg)
+
 Zutaten
 800 g vorwiegend festkochende Kartoffeln oder Drillinge
 800g weiße Bohnen, gekocht und abgespült
@@ -18,6 +20,8 @@ Oregano, Salz, Pfeffer
 3 EL Olivenöl
 800 ml Gemüsebrühe
 Salzzitronenpaste oder Zitronensaft
+
+![Steps for White Bean Potato Celery Pot](images/whitebean-potato-celery-pot/steps_grid.jpg)
 
 Zubereitung 
 1. Kartoffeln mit Schale ca. 20 min kochen.

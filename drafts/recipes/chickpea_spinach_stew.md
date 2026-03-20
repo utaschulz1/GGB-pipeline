@@ -1,5 +1,7 @@
 4 servings, grad so genug, nicht besonders geeignet zum Einfrieren.
 
+![Chickpea Spinach Stew](images/chickpea-spinach-stew/hero_chickpea_spinach_stew_16x9.jpg)
+
 35 min total
 
 3 c. sopa de azeite
@@ -16,6 +18,8 @@ sal marinho, pimento
 4 Frühlingszwiebeln
 250g Reis
 2 Orange zum Nachtisch
+
+![Steps for Chickpea Spinach Stew](images/chickpea-spinach-stew/steps_grid.jpg)
 
 Zubereitung 
 Preparação
