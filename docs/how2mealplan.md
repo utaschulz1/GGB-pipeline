@@ -1,5 +1,9 @@
+Make all meal plans in English regardless of the input language.
 Meal plan considered per week with 6 days of planed meals
-Below, weight of grains and legumes are considered in  cooked state
+Below, weight of grains and legumes are considered in  cooked state.
+Think in grams.
+All meals must be vegan and comply to the GGB method, that is, contain a grain (or potaoto, pasta, high carb something), a green (any vegetable), a bean (any legumes or tofu).
+PHASE 1: PLANING
 ## 1. Decide the scope
 dinner, dinner+lunch, dinner&lunch...
 ## 2. Decide the difficulty
@@ -31,3 +35,19 @@ per serving:
 200-400g vegetables
 total: 600-800g food + liquid
 consider the calories of the sauce (watery vs cocosmilk) and presence of high-calory food like nuts, humus...
+**Consider Cooking**
+Ultrathink of *synergy effects* between recipes when choosing to make the meal prep more efficient and to avoid food waste. Example: One dish uses bread as a side: consider another dish with bread, so that you can buy a whole loaf. 
+Add explanations like this: "Note about bread: Monday's lunch contains bread just as it accompanies wed/thur tomatosoup. Option 1: Buy rye bread that stays fresh for a couple of days, Option 2: Slice and freeze it. Option 3: Buy fresh before lunch."
+Example: One dish has a side salad with a whole lettuce head. Check, that it gets used up during the week in other side salads, otherwise it goes wasted, which we want to avoid. 
+Example: for a lunch with humus you need vegetable sticks like celery -> consider if you need celery for another dish that week.
+*Consider, if making more of one dish is acutally easier or harder*. Example: making humus with 400g of chickpeas is OK. Making it with 800g requires a pro grade food processor, which we don't have. So stick to 400g per preparation. Example: pre-prep beans for the whole weak if you buy them dry, that's efficient. Put them in the freezer.
+*Avoid food waste* Calculate the vegetables you need for the week: Will there be leftovers because package size is bigger than what you need? Are there opportunities for side salads where you can use these vegetables? 
+## 7. Check recipes
+Do you have all the recipes you need for this meal plan? If not you have to fix or create these recipes.
+## 8. Make the plan
+Assume that users go to work in teh morning and come back at 18h.
+Do not plan to eat prepared meals that have been in the fridge for more than 1 day, max is 2 days, exept some sauces. Freeze instead or plan to eat the same 2x in a row.
+Do Shopping on Saturday. Prefer shopping once a week. Think about the greens. Should you buy some off them closer to preparation? Plan the greens that degrade fast for the beginning of the week. 
+When do you need to soak beans and cook them in the slowcooker to be on time for meal prep?
+First food day is Monday, so Lunch prep should be on Sunday.
+Do you freeze for a second meal. When do you need to unfreeze to have it ready on time? Can and should you bulk prep anything?

@@ -65,6 +65,8 @@ Meal prep doesn't make sense if you have to watch your beans in the pan for an h
 ### How to Make Vegetable Stock (Boullion) Yourself
 **Option 1:** Save work and make vegetable stock by using the cooking water of the beans. When cooking beans in the slow cooker, add 1 tomato, 1 onion, 1 carrot and leftover leek to the beans and use the cooking water as stock.
 
+![Vegetable stock from cooking beans](images/toplevel-imgs/slowcooker_w_whitebeans_16x9.jpg)
+
 **Option 2:** Cook 1.5 liter of water with 1 tomato, 1 onion, 1 carrot and leftover leek for 30 minutes on low heat. Don't add salt! Strain the stock to keep the liquid and discard the vegetables. 
 
 ![Home-made Vegetable stock](images/toplevel-imgs/veggy-stock_16x9.jpg)

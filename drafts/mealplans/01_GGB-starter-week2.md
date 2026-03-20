@@ -5,7 +5,7 @@ If you are alone, freeze the extra portion for the next week or half the recipe.
 Strategy: Simple cooking sessions, one recipe at the time; Day 1: Prep Lunch for next 2 days, Day 2: prep dinner for next 2 days 
 Note: The plan covers both: buying dry or canned white beans/chick peas. If you use canned legumes, ignore "dry bean prep" (or dry bean use?)
 ## Equipemnet
-big pan (min. 3l), pan for rice, freezer, food processor or hand blender, stove top, 
+big pan (min. 3l), pan for rice, freezer, food processor or hand blender, stove top, large bowl
 ## Recipes
 ### dinners 
 chickpea_spinach_stew Mo/Tue
@@ -13,11 +13,11 @@ whitebean_potato_celery_pot
 cauliflower-potato-pea-curry
 ### lunches
 green_humus_and_bread Mo/Tue
-whitebean_tomato_soup
+couscous_and_chickpea_salad
 sweetpotato_and_whitebean_salad
 
 ## Shoppinglist
-Note about bread: Monday's lunch contains bread just as it accompanies wed/thur tomatosoup. Option 1: Buy rye bread that stays fresh for a couple of days, Option 2: Slice and freeze it. Option 3: Buy fresh before lunch.
+
 ## Schedule
 Saturday: Shopping, soaking chickpeas
 

@@ -71,6 +71,8 @@ Meal Prep macht keinen Sinn, wenn du deine Bohnen stundenlang beim Kochen hüten
 
 **Option 1:** Spar' dir Arbeit und mach Gemüsebrühe, indem du das Kochwasser der Bohnen verwendest. Füge beim Kochen der Bohnen im Slow-Cooker 1 Tomate, 1 Zwiebel, 1 Karotte und übrig gebliebenen Porree zu den Bohnen hinzu und verwende das Kochwasser als Brühe.
 
+![Gemüsebrühe vom Bohenenkochen](images/toplevel-imgs/slowcooker_w_whitebeans_16x9.jpg)
+
 **Option 2:** Koche 1,5 Liter Wasser mit 1 Tomate, 1 Zwiebel, 1 Karotte und übrig gebliebenem Porree 30 Minuten lang bei niedriger Hitze. Kein Salz hinzufügen! Die Brühe durch einen Durchschlag in einen Topf gießen und das ausgekochte Gemüse entsorgen.
 
 ![Gemüsebrühe selbst machen](images/toplevel-imgs/veggy-stock_16x9.jpg)

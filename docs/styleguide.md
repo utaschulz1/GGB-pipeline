@@ -12,7 +12,7 @@
 - A grain is food from grain like bread or rice or barley as well as high-carb sides, like sweet-potatoes, taco, wraps, nachos, potatoes.
 
 ## Recipes
-- Keep it short, dont mention washing and cleaning the vegetables or peeling the onions or shaking the cilantro or salat. This is not a cooking school. Instead, a step starts with cutting or grading or similar...
+- Keep it short, dont mention washing and cleaning the vegetables or peeling the onions or shaking the cilantro or salat. This is not a cooking school. Instead, a step starts with cutting or grating or similar...
 - Rice is just "cook the rice according to instructions on the package" dont go into detail
 
 ## German
@@ -48,6 +48,10 @@ Pandoc wraps every ![...]() in a <figure>. The CSS has figure { break-inside: av
 
   ### How to make the step image grids
   `python3 lib/make_grid.py "images/chili-sin-carne/[1-8]_*.jpg" 4 2 images/chili-sin-carne/steps_grid.jpg` 
+
+  or from inside the image folder
+  `python3 ../../lib/make_grid.py "[1-4]_*.jpg" 4 1 steps_grid.jpg`
+  
   ### How to crop or pad images to 1:1
 ```bash
   sudo apt install imagemagick
