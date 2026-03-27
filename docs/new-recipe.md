@@ -5,9 +5,8 @@ The filename (without `.md`) is used as the slug — keep it lowercase with hyph
 
 Omit any frontmatter fields that don't apply (e.g. `kcal_per_serving` is optional).
 
----
-
 ```markdown
+
 ---
 title: "Recipe Title"
 language: "en"
@@ -17,6 +16,7 @@ cook_time: "30 mins"
 servings: 4
 kcal_per_serving: 500
 image: "images/<recipe-slug>/main.jpg"
+in_mealplan: "01_GGB-starter-week2.md"
 ---
 
 # Recipe Title
@@ -48,9 +48,11 @@ meal prep advantages.
 3. Third step.
 4. Continue until done.
 5. Serve and enjoy.
+
+## Macros and kcal
+
 ```
 
----
 
 ## Notes
 
@@ -63,3 +65,11 @@ meal prep advantages.
 - Place recipe images in `images/<recipe-slug>/`.
 - The recipe must be listed in the plan's `included_recipes` field to appear in
   the PDF and EPUB.
+
+## images
+- The recipe needs a 16x9 hero image, ideally of the meal on my dish or white dish.
+- In the ingredient section there should be a foto grid with 4-8 step photos 1x1. Example for image grid maker:  `python3 lib/make_grid.py "images/chili-sin-carne/[1-8]_*.jpg" 4 2 images/chili-sin-carne/steps_grid.jpg` 
+- images are in the image/{slug} folder. When they are not or not enough, look under images/reuse-imgs if you can find ingredient or meals to combine. If this is not enough, write a prompt for nano banana, so I can generate the missing image for free manually.
+
+## kcal calculation
+In the end calculate the macros and kcal. Refer to "fatsecret {ingredient} calories" for calory websearch.

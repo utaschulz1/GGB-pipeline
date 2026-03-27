@@ -10,7 +10,7 @@ prep_time: "15 mins"
 cook_time: "25 mins"
 servings: 4
 kcal_per_serving: 560
-image: "images/chili-sin-carne/chili_sin_carne.jpg"
+image: "images/chili-sin-carne/chili_sin_carne_16x9.jpg"
 
 ---
 
