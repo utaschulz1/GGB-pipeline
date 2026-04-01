@@ -1,8 +1,8 @@
 Make all meal plans in English regardless of the input language.
 Meal plan considered per week with 6 days of planed meals
-Below, weight of grains and legumes are considered in  cooked state.
-Think in grams.
-All meals must be vegan and comply to the GGB method, that is, contain a grain (or potaoto, pasta, high carb something), a green (any vegetable), a bean (any legumes or tofu).
+Below, weight of legumes are considered in  cooked state.
+Think in metric units.
+All meals must be vegan and comply to the GGB method, that is, contain a grain (or (sweet) potato, pasta, a high carb something), a green (any vegetable), a bean (any legumes or tofu or plant protein).
 PHASE 1: PLANING
 ## 1. Decide the scope
 dinner, dinner+lunch, dinner&lunch...
@@ -45,7 +45,7 @@ Example: for a lunch with humus you need vegetable sticks like celery -> conside
 ## 7. Check recipes
 Do you have all the recipes you need for this meal plan? If not you have to fix or create these recipes.
 ## 8. Make the plan
-Assume that users go to work in teh morning and come back at 18h.
+Assume that users go to work in the morning and come back at 18h.
 Do not plan to eat prepared meals that have been in the fridge for more than 1 day, max is 2 days, exept some sauces. Freeze instead or plan to eat the same 2x in a row.
 Do Shopping on Saturday. Prefer shopping once a week. Think about the greens. Should you buy some off them closer to preparation? Plan the greens that degrade fast for the beginning of the week. 
 When do you need to soak beans and cook them in the slowcooker to be on time for meal prep?
